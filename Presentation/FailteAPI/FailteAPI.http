@@ -1,0 +1,6 @@
+@FailteAPI_HostAddress = http://localhost:5299
+
+GET {{FailteAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
