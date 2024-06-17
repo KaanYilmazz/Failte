@@ -10,7 +10,11 @@ namespace Domain.Entities.Common
     {
         public Guid Id { get; set; }
         public DateTime PostCreated { get; set; }
-        public User User { get; set; }
+        public required User User { get; set; }
+        public string Location { get; set; }
+        public required string Title { get; set; }
+        public string Content { get; set; }
+
 
     }
 }
