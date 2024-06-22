@@ -1,15 +1,15 @@
 ﻿using Domain.Entities.Common;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Repositories
 {
-    public class Item:PostEntity
+    public interface IRepository <T> where T : BaseEntity
     {
-        public required string ItemName { get; set; }
-        public decimal Price { get; set; }
+        DbSet<T> Table {  get; }
     }
 }
