@@ -25,7 +25,7 @@ namespace Persistence.Repositories
         public IQueryable<T> GetAll() => Table;
       
 
-        public async Task<T> GetAsync(string id) => await Table.FirstOrDefaultAsync(p=>p.Id==Guid.Parse(id));
+        public async Task<T> GetAsync(string id) => await Table.FindAsync(Guid.Parse(id));
       
 
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method) => await Table.FirstOrDefaultAsync(method);

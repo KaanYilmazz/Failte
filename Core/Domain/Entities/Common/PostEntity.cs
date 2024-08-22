@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities.Common
 {
-    public class PostEntity
+    public class PostEntity:BaseEntity
     {
-        public Guid Id { get; set; }
         public DateTime PostCreated { get; set; }
         public required User User { get; set; }
         public string Location { get; set; }

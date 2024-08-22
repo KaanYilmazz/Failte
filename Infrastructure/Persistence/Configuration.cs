@@ -11,7 +11,7 @@ namespace Persistence
                 ConfigurationManager configurationManager = new();
                 configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/FailteAPI"));
                 configurationManager.AddJsonFile("appsettings.json");
-                return configurationManager.GetConnectionString("PostreSQL");
+                return configurationManager.GetConnectionString("PostgreSQL");
             }
         }
     }
